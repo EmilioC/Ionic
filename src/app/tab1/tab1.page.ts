@@ -11,14 +11,5 @@ export class Tab1Page implements OnInit {
 
   ngOnInit(){
     console.log("--OnINIT - TAB1PAGE");
-    debugger;
-    console.log("--1----");
-
-
-    console.log("--2--");
-    debugger;
-    console.log("--3--");
-
-    console.log("--3---");
   }
 }
