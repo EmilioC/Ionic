@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
+import { ActionSheetController } from '@ionic/angular';
 
-interface Componente{
-  icon: string;
-  name: string;
-  redirecTo: string;
-  name1: string;
-  name2: string;
-  name3: string;
-}
 
 @Component({
   selector: 'app-tab2',
@@ -16,22 +9,57 @@ interface Componente{
 })
 export class Tab2Page {
 
-  componentes: Componente[] = [{
-    icon: 'boat-outline',
-    name: 'Carmen',
-    redirecTo: '/tabs/tab3',
-    name1:'Cosas maravillosas',
-    name2:'Cosas maravillosas',
-    name3:'Cosas maravillosas',
-  },{
-  icon: 'basketball-outline',
-  name: 'Ramiro',
-  redirecTo: '/tabs/tab3',
-  name1:'Cosas maravillosas',
-  name2:'Cosas maravillosas',
-  name3:'Cosas maravillosas',
-}];
+  constructor( private actionSheetCtrl: ActionSheetController) {}
 
-  constructor() {}
+  onClick(){
 
+    console.log('--TAB 2--')
+    this.presentActionSheet();
+
+  }
+
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetCtrl.create({
+      header: 'Albums',
+      //Obligamos a elegir opción 
+      backdropDismiss: false,
+      cssClass: 'my-custom-class',
+      buttons: [{
+        text: 'Delete',
+        role: 'destructive',
+        icon: 'trash-outline',
+        handler: () => {
+          console.log('Delete clicked');
+        }
+      }, {
+        text: 'Share',
+        icon: 'share-outline',
+        handler: () => {
+          console.log('Share clicked');
+        }
+      }, {
+        text: 'Play (open modal)',
+        icon: 'caret-forward-circle-outline',
+        handler: () => {
+          console.log('Play clicked');
+        }
+      }, {
+        text: 'Favorite',
+        icon: 'heart-outline',
+        handler: () => {
+          console.log('Favorite clicked');
+        }
+      }, {
+        text: 'Cancel',
+        icon: 'close-outline',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      }]
+    });
+    await actionSheet.present();
+
+
+}
 }

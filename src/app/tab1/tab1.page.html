@@ -1,60 +1,12 @@
-<app-header titulo="tab1"></app-header>>
+<app-header titulo="tab1"></app-header>
 
-<ion-content [fullscreen]="true" class="m-5">
-
-    <ion-grid>
-        <ion-button routerLink="/tabs/tab1" color="primary">1</ion-button>
-        <ion-button routerLink="/tabs/tab2" color="primary">2</ion-button>
-        <ion-button routerLink="/tabs/tab3" color="primary">3</ion-button>
-    </ion-grid>
-    <ion-grid>
-        <ion-row>
-            <ion-col>
-
-                <ion-list>
-                    <ion-radio-group>
-                        <ion-list-header>
-                            <ion-label>
-                                Auto Manufacturers
-                            </ion-label>
-                        </ion-list-header>
-
-                        <ion-item>
-                            <ion-label>Cord</ion-label>
-                            <ion-radio value="cord"></ion-radio>
-                        </ion-item>
-
-                        <ion-item>
-                            <ion-label>Duesenberg</ion-label>
-                            <ion-radio value="duesenberg"></ion-radio>
-                        </ion-item>
-
-                        <ion-item>
-                            <ion-label>Hudson</ion-label>
-                            <ion-radio value="hudson"></ion-radio>
-                        </ion-item>
-
-                        <ion-item>
-                            <ion-label>Packard</ion-label>
-                            <ion-radio value="packard"></ion-radio>
-                        </ion-item>
-
-                        <ion-item>
-                            <ion-label>Studebaker</ion-label>
-                            <ion-radio value="studebaker"></ion-radio>
-                        </ion-item>
-                    </ion-radio-group>
-                </ion-list>
-            </ion-col>
-
-        </ion-row>
-    </ion-grid>
-
-    <ion-header collapse="condense">
-        <ion-toolbar>
-            <ion-title size="large">Tab 1</ion-title>
-        </ion-toolbar>
-    </ion-header>
-
-    <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+<ion-content [fullscreen]="false">
+    <!-- List of Sliding Items -->
+    <ion-list>
+        <ion-item *ngFor="let c of componentes" [routerLink]="c.redirecTo">
+            <ion-icon [name]="c.icon" slot="start"></ion-icon>
+            <ion-label>{{c.name}}</ion-label>
+            <ion-label>{{c.redirecTo}}</ion-label>
+        </ion-item>
+    </ion-list>
 </ion-content>

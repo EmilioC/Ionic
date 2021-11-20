@@ -1,12 +1,7 @@
 <app-header titulo="tab2"></app-header>
 
-<ion-content [fullscreen]="false">
-    <!-- List of Sliding Items -->
-    <ion-list>
-        <ion-item *ngFor="let c of componentes" [routerLink]="c.redirecTo">
-            <ion-icon [name]="c.icon" slot="start"></ion-icon>
-            <ion-label>{{c.name}}</ion-label>
-            <ion-label>{{c.redirecTo}}</ion-label>
-        </ion-item>
-    </ion-list>
+<ion-content>
+    <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+        Click me
+    </ion-button>
 </ion-content>
