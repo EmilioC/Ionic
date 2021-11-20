@@ -3,5 +3,12 @@
         <ion-buttons slot="start">
             <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
         </ion-buttons>
+
+        <ion-grid>
+            <ion-title class="ion-text-capitalize">{{titulo}}</ion-title>
+            <ion-button routerLink="/tabs/tab1" color="primary">1</ion-button>
+            <ion-button routerLink="/tabs/tab2" color="primary">2</ion-button>
+            <ion-button routerLink="/tabs/tab3" color="primary">3</ion-button>
+        </ion-grid>
     </ion-toolbar>
 </ion-header>
