@@ -23,7 +23,14 @@ export class Tab2Page {
     name1:'Cosas maravillosas',
     name2:'Cosas maravillosas',
     name3:'Cosas maravillosas',
-  }];
+  },{
+  icon: 'basketball-outline',
+  name: 'Ramiro',
+  redirecTo: '/tabs/tab3',
+  name1:'Cosas maravillosas',
+  name2:'Cosas maravillosas',
+  name3:'Cosas maravillosas',
+}];
 
   constructor() {}
 
