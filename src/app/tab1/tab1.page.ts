@@ -26,7 +26,7 @@ export class Tab1Page{
   },{
   icon: 'basketball-outline',
   name: 'Ramiro',
-  redirecTo: '/tabs/tab3',
+  redirecTo: '/avatar',
   name1:'Cosas maravillosas',
   name2:'Cosas maravillosas',
   name3:'Cosas maravillosas',
