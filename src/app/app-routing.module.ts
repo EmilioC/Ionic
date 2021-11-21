@@ -9,6 +9,22 @@ const routes: Routes = [
   {
     path: 'avatar',
     loadChildren: () => import('./avatar/avatar.module').then( m => m.AvatarPageModule)
+  },
+  {
+    path: 'button',
+    loadChildren: () => import('./button/button.module').then( m => m.ButtonPageModule)
+  },
+  {
+    path: 'card',
+    loadChildren: () => import('./card/card.module').then( m => m.CardPageModule)
+  },
+  {
+    path: 'checkbox',
+    loadChildren: () => import('./checkbox/checkbox.module').then( m => m.CheckboxPageModule)
+  },
+  {
+    path: 'date-time',
+    loadChildren: () => import('./date-time/date-time.module').then( m => m.DateTimePageModule)
   }
 ];
 @NgModule({

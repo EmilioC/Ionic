@@ -1,12 +1,17 @@
-<app-header titulo="avatar"></app-header>
-<ion-chip color="primary" mode="ios" outline="true">
-    <ion-label>Default</ion-label>
-</ion-chip>
+<!-- <app-header titulo="avatar"></app-header> -->
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/tabs/tab1" color="primary"></ion-back-button>
+        </ion-buttons>
+        <ion-title color="primary">Avatar</ion-title>
+        <ion-avatar slot="end">
+            <img src="../../../assets/stan-lee.jpg" />
+        </ion-avatar>
+    </ion-toolbar>
+</ion-header>
 
 <ion-content>
-    <ion-avatar>
-        <img src="../../../assets/stan-lee.jpg" />
-    </ion-avatar>
     <ion-list>
         <ion-item *ngFor="let item of [1,2,3,4,5,6,2,2,2,2,2,2,1,1,1,1,1]">
             <ion-avatar slot="start">
@@ -15,5 +20,4 @@
             <ion-label>Stan Lee</ion-label>
         </ion-item>
     </ion-list>
-
 </ion-content>
