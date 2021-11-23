@@ -12,7 +12,26 @@
 
         <ion-item>
             <ion-label>Fecha de Nacimiento</ion-label>
-            <ion-datetime [value]="fechaNaci.toISOString()" display-format="DD MMMM YYYY"></ion-datetime>
+            <ion-datetime [value]="fechaNaci.toISOString()" display-format="DD MMMM YYYY" (ionChange)="cambioFecha ( $event )"></ion-datetime>
+        </ion-item>
+
+        <ion-list-header>
+            <ion-label>Restricciones</ion-label>
+        </ion-list-header>
+
+        <ion-item>
+            <ion-label>Fecha de Nacimiento</ion-label>
+            <ion-datetime display-format="DD MMMM YYYY" min="2001-01-01" max="2022-01-01"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Años</ion-label>
+            <ion-datetime display-format="YYYY" min="2001" max="2022"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Custom Options</ion-label>
+            <ion-datetime [pickerOptions]="customPickerOptions" [yearValues]="customYearValues"></ion-datetime>
         </ion-item>
 
     </ion-list>
