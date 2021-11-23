@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DateTimePage implements OnInit {
 
+    fechaNaci: Date = new Date();
+
   constructor() { }
 
   ngOnInit() {
