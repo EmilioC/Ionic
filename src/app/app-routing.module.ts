@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'date-time',
     loadChildren: () => import('./date-time/date-time.module').then( m => m.DateTimePageModule)
+  },
+  {
+    path: 'fab',
+    loadChildren: () => import('./fab/fab.module').then( m => m.FabPageModule)
   }
 ];
 @NgModule({
