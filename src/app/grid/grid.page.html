@@ -1,0 +1,22 @@
+<app-header titulo="Grid"></app-header>
+
+<ion-content fixed>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12" size-lg="3" size-md="4" size-sm="6" *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1]">
+                <ion-card>
+                    <ion-img src="../../assets/stan-lee.jpg"></ion-img>
+                </ion-card>
+                <ion-card-header>
+                    <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+                    <ion-card-title>Awesome Title</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    The grid is a powerful mobile-first flexbox system for building custom layouts. It is composed of three units — a grid, row(s) and column(s). Columns will expand to fill the row, and will resize to fit additional columns. It is based on a 12 column layout
+                    with different breakpoints based on the screen size. The number of columns can be customized using CSS. See the Responsive Grid documentation for more information.
+                </ion-card-content>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

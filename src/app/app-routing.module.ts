@@ -29,6 +29,18 @@ const routes: Routes = [
   {
     path: 'fab',
     loadChildren: () => import('./fab/fab.module').then( m => m.FabPageModule)
+  },
+  {
+    path: 'grid',
+    loadChildren: () => import('./grid/grid.module').then( m => m.GridPageModule)
+  },
+  {
+    path: 'infinite',
+    loadChildren: () => import('./infinite/infinite.module').then( m => m.InfinitePageModule)
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./list/list.module').then( m => m.ListPageModule)
   }
 ];
 @NgModule({
