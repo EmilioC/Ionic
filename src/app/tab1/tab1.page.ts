@@ -1,13 +1,8 @@
-import { Component } from '@angular/core';
-
-interface Componente{
-  icon: string;
-  name: string;
-  redirecTo: string;
-  name1: string;
-  name2: string;
-  name3: string;
-}
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DataService } from '../services/data.service';
+import { Componente } from '../interfaces/interfaces';
+import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-tab1',
@@ -16,25 +11,12 @@ interface Componente{
 })
 export class Tab1Page{
 
-  componentes: Componente[] = [{
-    icon: 'boat-outline',
-    name: 'Carmen',
-    redirecTo: '/tabs/tab3',
-    name1:'Cosas maravillosas',
-    name2:'Cosas maravillosas',
-    name3:'Cosas maravillosas',
-  },{
-  icon: 'basketball-outline',
-  name: 'Ramiro',
-  redirecTo: '/avatar',
-  name1:'Cosas maravillosas',
-  name2:'Cosas maravillosas',
-  name3:'Cosas maravillosas',
-}];
+  componentes: Observable<Componente[]>;
 
-  constructor() {}
+  constructor( private dataService: DataService) {
+  }
 
   ngOnInit(){
-    console.log("--OnINIT - TAB1PAGE");
+    this.componentes = this.dataService.getMenuOpts();
   }
 }
