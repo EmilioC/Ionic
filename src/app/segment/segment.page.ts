@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class SegmentPage implements OnInit {
 
   superHeroes: Observable<any>;
+  publisher: string = 'todos';
 
   constructor( private dataService: DataService) { }
 
@@ -19,6 +20,7 @@ export class SegmentPage implements OnInit {
   }
   segmentChanged( event ) {
     console.log(event.detail);
+    this.publisher = event.detail.value;
   }
 
 }
