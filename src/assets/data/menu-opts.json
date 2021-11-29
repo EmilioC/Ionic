@@ -1,4 +1,9 @@
 [{
+        "icon": "caret-forward-outline",
+        "name": "Inicio",
+        "redirectTo": "/inicio"
+    },
+    {
         "icon": "american-football-outline",
         "name": "Action Sheet",
         "redirectTo": "/action-sheet"
