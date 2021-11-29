@@ -117,5 +117,10 @@
         "icon": "pricetag-outline",
         "name": "Toast",
         "redirectTo": "/toast"
+    },
+    {
+        "icon": "copy-outline",
+        "name": "Segment",
+        "redirectTo": "/segment"
     }
 ]
