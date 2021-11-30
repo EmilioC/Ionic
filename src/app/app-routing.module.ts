@@ -65,6 +65,10 @@ const routes: Routes = [
   {
     path: 'tab-s',
     loadChildren: () => import('./tab-s/tab-s.module').then( m => m.TabSPageModule)
+  },
+  {
+    path: 'toast',
+    loadChildren: () => import('./toast/toast.module').then( m => m.ToastPageModule)
   }
 ];
 @NgModule({
