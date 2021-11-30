@@ -111,7 +111,7 @@
     {
         "icon": "cog-outline",
         "name": "Tabs",
-        "redirectTo": "/tabs"
+        "redirectTo": "/tab-s"
     },
     {
         "icon": "pricetag-outline",
