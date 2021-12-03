@@ -71,8 +71,8 @@ const routes: Routes = [
     loadChildren: () => import('./toast/toast.module').then( m => m.ToastPageModule)
   },
   {
-    path: 'imput',
-    loadChildren: () => import('./imput/imput.module').then( m => m.ImputPageModule)
+    path: 'input',
+    loadChildren: () => import('./input/input.module').then( m => m.InputPageModule)
   }
 ];
 @NgModule({

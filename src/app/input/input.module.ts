@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ImputPageRoutingModule } from './imput-routing.module';
+import { InputPageRoutingModule } from './input-routing.module';
 
-import { ImputPage } from './imput.page';
+import { InputPage } from './input.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ImputPageRoutingModule
+    InputPageRoutingModule
   ],
-  declarations: [ImputPage]
+  declarations: [InputPage]
 })
-export class ImputPageModule {}
+export class InputPageModule {}
